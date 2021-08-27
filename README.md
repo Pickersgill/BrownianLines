@@ -1,6 +1,6 @@
 # Jack's Desktop Background 2.0
 
-I finally updated Ubuntu and decided to use the oppurtunity to make a new wallaper.
+I finally updated Ubuntu and decided to use the opportunity to make a new wallaper.
 
 # What is this?
 This simple tool let you generate images made up of many lines. Each line traces the path of a single 
