@@ -1,5 +1,6 @@
 import classes
 import style
+import sys
 import random
 from PIL import Image, ImageDraw
 
@@ -40,10 +41,19 @@ class DrawField:
 
                 self.draw_line_with_outline(trail, temp_col, style.HERO_LINE_W)
 
-field = Field(style.PARTICLE_NUM, style.HERO_NUM)
-draw = DrawField(field)
+if __name__ == "__main__":
+    
+    seed = random.randrange(sys.maxsize)
 
-field.sim(style.TIME)
-draw.render()
-draw.get_field_img().show()
+    if style.SEED:
+        seed = style.SEED    
+    
+    print("Using seed: ", seed)
 
+    field = Field(style.PARTICLE_NUM, style.HERO_NUM)
+    draw = DrawField(field)
+    
+    field.sim(style.TIME)
+    draw.render()
+    draw.get_field_img().show()
+    
