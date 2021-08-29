@@ -38,6 +38,9 @@ class DrawField:
                     temp_col = random.choice(style.HERO_COLS)
                 else:
                     temp_col = style.HERO_COL
+    
+                if "#" not in temp_col:
+                    temp_col = "#" + temp_col
 
                 self.draw_line_with_outline(trail, temp_col, style.HERO_LINE_W)
 
